@@ -1,15 +1,22 @@
 {
     "name": "unforgivencl/larachileanlaw",
-    "description": "Wrapper to consume LeyChile.cl web service to get laws",
+    "description": "Provides an wrapper to leychile.cl with Laravel 5.3.",
+    "type": "laravel-package",
     "license": "MIT",
     "authors": [
         {
-            "name": "UnforgivenCL",
-            "email": "guillermo.lobos02@inacapmail.cl"
+            "name": "guillermo lobos",
+            "email": "guillermo.lobos.parada@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-    	 "guzzlehttp/guzzle": "^6.2"
-    }
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Unforgivencl\\LaraChileanLaw\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
 }
