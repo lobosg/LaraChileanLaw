@@ -25,7 +25,7 @@ class LaraChileanLawServiceProvider extends ServiceProvider
 	 */
 	public function register()
     {
-        $this->app->bind('law', function () {
+        $this->app->singleton('Unforgivencl\LaraChileanLaw\LawsApi\ApiRequest', function () {
             return new ApiRequest(new Client());
         });
     }
