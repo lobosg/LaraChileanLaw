@@ -8,22 +8,18 @@ use Illuminate\Support\ServiceProvider;
 
 class LaraChileanLawServiceProvider extends ServiceProvider
 {
-	/**
-	 * Bootstrap the application services.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		//
-	}
+    /**
+     * Bootstrap the application services.
+     */
+    public function boot()
+    {
+        //
+    }
 
-	/**
-	 * Register the application services.
-	 *
-	 * @return void
-	 */
-	public function register()
+    /**
+     * Register the application services.
+     */
+    public function register()
     {
         $this->app->singleton('Unforgivencl\LaraChileanLaw\LawsApi\ApiRequest', function () {
             return new ApiRequest(new Client());

@@ -7,23 +7,23 @@ use ErrorException;
 
 class ApiRequest
 {
-	protected $client;
+    protected $client;
 
-	public function __construct(ClientInterface $client)
-	{
-		$this->client = $client;
-	}
+    public function __construct(ClientInterface $client)
+    {
+        $this->client = $client;
+    }
 
-	public function __call($name, $args)
-	{
-		$map = [
-			'law' => Endpoints\Law::class,
-		];
+    public function __call($name, $args)
+    {
+        $map = [
+            'law' => Endpoints\Law::class,
+        ];
 
-		if (!isset($map[$name])) {
-			throw new ErrorException("Endpoint `$name` not found");
-		}
+        if (!isset($map[$name])) {
+            throw new ErrorException("Endpoint `$name` not found");
+        }
 
-		return new $map[$name]($this->client, $args);
-	}
+        return new $map[$name]($this->client, $args);
+    }
 }
