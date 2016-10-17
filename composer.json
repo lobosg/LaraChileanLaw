@@ -1,0 +1,15 @@
+{
+    "name": "unforgivencl/larachileanlaw",
+    "description": "Wrapper to consume LeyChile.cl web service to get laws",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "UnforgivenCL",
+            "email": "guillermo.lobos02@inacapmail.cl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    	 "guzzlehttp/guzzle": "^6.2"
+    }
+}
